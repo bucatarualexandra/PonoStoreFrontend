@@ -1,42 +1,71 @@
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 50px;
+    background-image: url('../Assets/3.png');
+    background-size: cover;
 }
-.footer-logo{
+
+.footer-logo {
+    margin-top: 200px;
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.footer-logo p{
+
+.footer-logo img {
+    width: 60px;
+}
+
+.footer-logo p {
     color: #383838;
     font-size: 46px;
     font-weight: 700;
+    margin-left: -20px;
 }
-.footer-links{
-    display: flex;
+
+
+.footer-links {
     list-style: none;
     gap: 50px;
     color: #252525;
     font-size: 20px;
+    column-count: 3;
 }
-.footer-links li{
+
+.footer-links a{
+    text-decoration: none;
     cursor: pointer;
+    color: #1a1a1a;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #284c35d8;
 }
-.footer-social-icon{
+.footer-links p{
+    margin-bottom: 10px;
+}
+
+
+.footer-social-icon {
     display: flex;
     gap: 20px;
 }
-.footer-icons-container{
+
+.footer-icons-container {
     padding: 10px;
     padding-bottom: 6px;
     background: #fbfbfb;
-    border: 1px solid #ebebeb;
-
+    cursor: pointer;
 }
-.footer-copyright{
+.footer-icons-container img{
+    width: 30px;
+   
+}
+
+
+.footer-copyright {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +75,8 @@
     color: #1a1a1a;
     font-size: 20px;
 }
-.footer-copyright hr{
+
+.footer-copyright hr {
     width: 80%;
     border: none;
     border-radius: 10px;
@@ -54,28 +84,34 @@
     background: #c7c7c7;
 }
 
-@media(max-width:800px){
-    .footer{
+@media(max-width:800px) {
+    .footer {
         gap: 20px;
     }
-    .footer-logo{
-        gap:10px;
+
+    .footer-logo {
+        gap: 10px;
         align-items: center;
     }
-    .footer-logo img{
-        width: 40px;
+
+    .footer-logo img {
+        width: 50%;
     }
-    .footer-logo p{
+
+    .footer-logo p {
         font-size: 25px;
     }
-    .footer-links{
+
+    .footer-links {
         font-size: 14px;
         gap: 10px
     }
-    .footer-social-icon img{
-        width: 22px; 
+
+    .footer-social-icon img {
+        width: 22px;
     }
-    .footer-copyright{
+
+    .footer-copyright {
         font-size: 13px;
     }
 }

@@ -3,7 +3,9 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin-bottom: 100px;
+    padding-bottom: 50px;
+    background-image: url('../Assets/4.png');
+    background-size: cover;
 
 }
 .new-collections h1{
