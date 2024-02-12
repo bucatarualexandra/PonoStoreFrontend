@@ -10,6 +10,14 @@ import Footer from "./Components/Footer/Footer";
 import men_banner from "./Components/Assets/banner_mens.png"
 import women_banner from "./Components/Assets/banner_women.png"
 import kid_banner from "./Components/Assets/banner_kids.png"
+import About from "./Pages/footerPages/About"
+import Contact from "./Pages/footerPages/Contact"
+import Order from "./Pages/footerPages/Order"
+import Deliver  from "./Pages/footerPages/Deliver"
+import Politics from "./Pages/footerPages/Politics"
+import SendPolitics from "./Pages/footerPages/SendPolitics"
+import ReturnPolitics from "./Pages/footerPages/ReturnPolitics"
+import Confidential from "./Pages/footerPages/Confidential"
 
 function App() {
   return (
@@ -28,6 +36,18 @@ function App() {
 
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignUp />} />
+
+
+          <Route path="/Despre noi" element={<About />} />
+          <Route path="/Contact" element={<Contact/>} />
+          <Route path="/Plasarea unei comenzi" element={<Order />} />
+          <Route path="/Livrarea" element={<Deliver />} />
+          <Route path="/Termeni și condiții" element={<Politics />} />
+          <Route path="/Politica de expediere" element={<SendPolitics />} />
+          <Route path="/Politica de returnare" element={<ReturnPolitics />} />
+          <Route path="Politica de confidențialitate" element={<Confidential />} />
+          <Route path="/https://anpc.ro/" target="_blank" />
+
 
         </Routes>
         <Footer />

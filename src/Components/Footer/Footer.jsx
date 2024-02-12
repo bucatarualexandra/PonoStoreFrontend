@@ -29,7 +29,7 @@ const Footer = () => {
                 <p> PONO </p>
             </div>
             <div className='footer-links'>
-          <Link to="/Despre noi"  element={<About />}><p> Despre noi</p></Link>
+          <Link to="/Despre noi"  element={<About/>}><p> Despre noi</p></Link>
           <Link to="/Contact"  element={<Contact />}><p> Contact</p></Link>
           <Link to="/Plasarea unei comenzi"  element={<Order />}><p> Plasarea comenzii</p></Link>
           <Link to="/Livrarea"  element={<Deliver />}><p> Livrarea</p></Link>
