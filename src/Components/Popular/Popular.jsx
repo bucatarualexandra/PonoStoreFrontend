@@ -6,17 +6,16 @@ const Popular = () => {
     const [popularProducts,setPopularProducts]= useState([]);
 
     useEffect (()=>{
-        fetch("http://localhost:4000/popularinwomen")
+        fetch("http://localhost:4000/popularinnunta")
         .then((response)=>response.json())
         .then((data)=>setPopularProducts(data));
     },[])
 
 
-
     return (
         <div className="popular">
 
-            <h1> Popular in wedding</h1>
+            <h1> Populare pentru Nuntă</h1>
             <hr />
             <div className="popular-item">
 

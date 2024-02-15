@@ -10,12 +10,12 @@ const CartItems = () => {
     return (
         <div className="cartitems">
             <div className="cartitems-format-main">
-                <p>Products</p>
-                <p>Title</p>
-                <p>Price</p>
-                <p>Quantity</p>
+                <p>Produs</p>
+                <p>Denumire</p>
+                <p>Preț</p>
+                <p>Cantitate</p>
                 <p>Total</p>
-                <p>Remove</p>
+                <p>Șterge</p>
             </div>
             <hr />
             {all_product.map((e) => {
@@ -36,7 +36,7 @@ const CartItems = () => {
             })}
             <div className="cartitems-down">
                 <div className="cartitems-total">
-                    <h1>cart Totals</h1>
+                    <h1>Total</h1>
                     <div>
                         <div className="cartitems-total-item">
                             <p>Subtotal</p>
@@ -44,8 +44,8 @@ const CartItems = () => {
                         </div>
                         <hr />
                         <div className="cartitems-total-item">
-                            <p>Shipping Fee</p>
-                            <p>Free</p>
+                            <p>Valoare</p>
+                            <p>Transport</p>
                         </div>
                         <hr />
                         <div className="cartitems-total-item">
@@ -53,15 +53,15 @@ const CartItems = () => {
                             <h3>${getTotalCartAmount()}</h3>
                         </div>
                     </div>
-                    <button> Proceed to checkout </button>
+                    <button> Trimite comanda</button>
                 </div>
 
                 <div className="cartitems-promocod">
 
-                    <p>If you have a promo code, Enter it here</p>
+                    <p>Dacă ai un cod de reducere te rog să îl introduci </p>
                     <div className="cartitems-promobox">
                         <input type="text" placeholder="promo code" />
-                        <button> Submit</button>
+                        <button> Aplică reducerea</button>
                     </div>
                 </div>
 

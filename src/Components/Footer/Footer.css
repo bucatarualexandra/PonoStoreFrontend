@@ -5,11 +5,11 @@
     align-items: center;
     gap: 50px;
     background-image: url('../Assets/3.png');
-    background-size: cover;
+    background-size: cover; 
 }
 
 .footer-logo {
-    margin-top: 150px;
+    padding-top: 300px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -84,6 +84,17 @@
     background: #c7c7c7;
 }
 
+@media(max-width:1800px) {
+    .footer-logo{
+        padding-top: 200px;
+    }
+}
+@media(max-width:1300px) {
+    .footer-logo{
+        padding-top: 150px;
+    }
+}
+
 @media(max-width:800px) {
     .footer {
         gap: 20px;
@@ -92,7 +103,7 @@
     }
 
     .footer-logo {
-        margin-top: 50px;
+       padding-top: 80px;
         gap: 10px;
         display: flex;
         align-items: center;

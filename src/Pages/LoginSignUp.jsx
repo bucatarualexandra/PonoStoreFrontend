@@ -62,18 +62,18 @@ const signup = async()=>{
             <div className="loginsignup-container">
                 <h1>{state}</h1>
                 <div className="loginsignup-fields">
-                    {state==="Sign Up"? <input name="username" value={formData.username} onChange={changeHandler} type='text' placeholder="Your name" />:<></> }
-                    <input name="email" value={formData.email} onChange={changeHandler} type='email' placeholder="Email Adress " />
-                    <input name="password" value={formData.password} onChange={changeHandler} type='password' placeholder="Choose a password" />
+                    {state==="Sign Up"? <input name="username" value={formData.username} onChange={changeHandler} type='text' placeholder="Nume" />:<></> }
+                    <input name="email" value={formData.email} onChange={changeHandler} type='email' placeholder="Adresa de email " />
+                    <input name="password" value={formData.password} onChange={changeHandler} type='password' placeholder="Alege o parola" />
                 </div>
-                <button onClick={()=>{state==="Login"?login():signup()}}> Continue</button>
-                {state==="Sign Up"?  <p className="loginsignup-login"> Already have an account <span onClick={()=>{setState("Login")}}>Login here!</span> </p>
-                : <p className="loginsignup-login"> Create an account? <span onClick={()=>{setState("Sign Up")}}>Click here!</span> </p> }
+                <button onClick={()=>{state==="Login"?login():signup()}}> Continuă</button>
+                {state==="Sign Up"?  <p className="loginsignup-login"> Dacă deja ai un cont <span onClick={()=>{setState("Login")}}>Autentifică-te!</span> </p>
+                : <p className="loginsignup-login"> Vrei să creezi un cont? <span onClick={()=>{setState("Sign Up")}}>Click aici!</span> </p> }
                
                
                 <div className="loginsignup-agree">
                     <input type="checkbox" name="" id="" />
-                    <p> By contiuing, I agree to the terms of use & privacy policy</p>
+                    <p> Sunt de acord cu termeni și condițiile stabilite.</p>
 
                 </div>
             </div>

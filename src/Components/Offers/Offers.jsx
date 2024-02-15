@@ -9,10 +9,10 @@ const Offers = () => {
         <div className="offers">
             <div className="offers-left">
 
-                <h1>offers for </h1>
-                <h1>Christening</h1>
-                <p> FOR THE PRICE AND PRICESES</p>
-                <button> Check now</button>
+                <h1>Oferte  </h1>
+                <h1>Botez</h1>
+                <p> PENTRU PRINȚI ȘI PRINȚESE</p>
+                <button> Produse Botez</button>
             </div>
             <div className="offers-right">
                 <img src={exclusive_image} alt="" />

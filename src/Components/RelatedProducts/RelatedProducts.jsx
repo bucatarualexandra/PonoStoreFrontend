@@ -9,7 +9,7 @@ const RelatedProducts = () => {
 
     return (
         <div className="relatedproducts">
-            <h1> Related Products</h1>
+            <h1> Mai multe produse</h1>
             <hr />
             <div className="relatedproducts-item">
                 {data_product.map((item, i) => {

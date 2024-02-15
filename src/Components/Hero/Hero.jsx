@@ -7,15 +7,17 @@ const Hero = () => {
     return (
         <div className="hero">
             <div className="hero-left">
-                <h2>New Arrinals only</h2>
-                <div className="hero-hand-icon">
-                    <p>New</p>
-                </div>
-                <p> collection</p>
-                <p>for everyone</p>
+                
+                <h1>√ Invitații</h1>
+                <h1>√ Meniuri</h1>
+                <h1>√ Plicuri dar</h1>
+                <h1>√ Mărturii</h1>
+                <h1>√ Tot ce ai nevoie</h1>
+
+                <p></p>
 
                 <div className="hero-latest-btn">
-                    <div>Latest Colection</div>
+                    <div>Produsele noastre</div>
                     <img src={arrow_icon} alt="" />
 
                 </div>
