@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ShopCategory from './Pages/ShopCategory';
+import AllProducts from './Pages/AllProducts';
 import LoginSignUp from './Pages/LoginSignUp';
 import Shop from './Pages/Shop';
 import Product from './Pages/Product';
@@ -10,6 +11,7 @@ import Footer from "./Components/Footer/Footer";
 import wedding_banner from "./Components/Assets/banner_mens.png"
 import christening_banner from "./Components/Assets/banner_women.png"
 import project_banner from "./Components/Assets/banner_kids.png"
+import shop_banner from "./Components/Assets/banner_kids.png"
 import About from "./Pages/footerPages/About"
 import Contact from "./Pages/footerPages/Contact"
 import Order from "./Pages/footerPages/Order"
@@ -26,10 +28,12 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<Shop />} />
-          <Route path="/mens" element={<ShopCategory banner = {wedding_banner} category="nunta" />} />
-          <Route path="/womens" element={<ShopCategory banner = {christening_banner} category="botez" />} />
-          <Route path="/kids" element={<ShopCategory banner = {project_banner} category="proiect" />} />
+        
+          <Route path="/home" element={<Shop />} />
+          <Route path="/shop" element={<AllProducts banner = {shop_banner} />} />
+          <Route path="/wedding" element={<ShopCategory banner = {wedding_banner} category="nunta" />} />
+          <Route path="/christening" element={<ShopCategory banner = {christening_banner} category="botez" />} />
+          <Route path="/projects" element={<ShopCategory banner = {project_banner} category="proiect" />} />
           <Route path='product' element={<Product />} >
             <Route path=':productId' element={<Product />} />
           </Route>

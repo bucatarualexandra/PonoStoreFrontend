@@ -1,8 +1,16 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./Offers.css"
-import exclusive_image from "../Assets/exclusive_image.png"
+import Item from "../Items/Item"
+
 
 const Offers = () => {
+    const [offerProducts, setOfferProducts] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:4000/offerproducts")
+            .then((response) => response.json())
+            .then((data) => setOfferProducts(data));
+    }, [])
 
 
     return (
@@ -12,10 +20,14 @@ const Offers = () => {
                 <h1>Oferte  </h1>
                 <h1>Botez</h1>
                 <p> PENTRU PRINȚI ȘI PRINȚESE</p>
-                <button> Produse Botez</button>
+                <a href="http://localhost:3000/christening"><button> Produse Botez</button></a>
             </div>
-            <div className="offers-right">
-                <img src={exclusive_image} alt="" />
+
+            <div className="offer-item-right">
+
+                {offerProducts.map((item, i) => {
+                    return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
+                })}
 
             </div>
         </div>

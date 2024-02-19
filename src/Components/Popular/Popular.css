@@ -3,10 +3,12 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 90vh;
+    padding-top: 70px;
     background-image: url('../Assets/2.png');
     background-size: cover;
-    display: flex;
+}
+.popular a{
+    text-decoration: none;
 }
 .popular h1{
     color: #171717;
@@ -24,6 +26,10 @@
     display: flex;
     gap: 30px;
 }
+.popular-item img{
+    width: 100%;
+}
+
 @media(max-width:1280px){
     .popular{
         height: 70vh;

@@ -15,7 +15,7 @@ const Popular = () => {
     return (
         <div className="popular">
 
-            <h1> Populare pentru Nuntă</h1>
+           <a href="http://localhost:3000/wedding"> <h1> Populare pentru Nuntă</h1> </a>
             <hr />
             <div className="popular-item">
 

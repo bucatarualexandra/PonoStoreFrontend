@@ -1,9 +1,20 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./Hero.css"
-import arrow_icon from "../Assets/arrow.png"
 import hero_image from "../Assets/hero_image.png"
+import Item from "../Items/Item"
+
 
 const Hero = () => {
+
+    const [allProducts,setAllProducts]= useState([]);
+
+    useEffect(()=>{
+        fetch("http://localhost:4000/allproductsHero")
+        .then((response)=> response.json())
+        .then((data)=>setAllProducts(data));
+    },[])
+
+
     return (
         <div className="hero">
             <div className="hero-left">
@@ -13,19 +24,26 @@ const Hero = () => {
                 <h1>√ Plicuri dar</h1>
                 <h1>√ Mărturii</h1>
                 <h1>√ Tot ce ai nevoie</h1>
+                <img src={hero_image} className="hero-image" />
 
                 <p></p>
 
                 <div className="hero-latest-btn">
-                    <div>Produsele noastre</div>
-                    <img src={arrow_icon} alt="" />
+                   <a href="http://localhost:3000/shop"> <div> Produsele noastre</div> </a>
 
                 </div>
             </div>
-            <div className="hero-right">
-                <img src={hero_image} alt="" />
+
+            <div className="allproducts" id="scrollableDiv">
+                {allProducts.map((item, i) => {
+                    return <Item key={i} id={item.id} name={item.name}
+                        image={item.image} new_price={item.new_price}
+                        old_price={item.old_price} />
+                })}
+
             </div>
         </div>
+        
 
     )
 }
