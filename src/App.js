@@ -3,10 +3,8 @@ import Navbar from './Components/Navbar/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ShopCategory from './Pages/ShopCategory';
 import AllProducts from './Pages/AllProducts';
-import LoginSignUp from './Pages/LoginSignUp';
 import Shop from './Pages/Shop';
 import Product from './Pages/Product';
-import Cart from './Pages/Cart';
 import Footer from "./Components/Footer/Footer";
 import wedding_banner from "./Components/Assets/banner_mens.png"
 import christening_banner from "./Components/Assets/banner_women.png"
@@ -29,7 +27,7 @@ function App() {
 
         <Routes>
         
-          <Route path="/home" element={<Shop />} />
+          <Route path="/" element={<Shop />} />
           <Route path="/shop" element={<AllProducts banner = {shop_banner} />} />
           <Route path="/wedding" element={<ShopCategory banner = {wedding_banner} category="nunta" />} />
           <Route path="/christening" element={<ShopCategory banner = {christening_banner} category="botez" />} />
@@ -37,9 +35,6 @@ function App() {
           <Route path='product' element={<Product />} >
             <Route path=':productId' element={<Product />} />
           </Route>
-
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<LoginSignUp />} />
 
 
           <Route path="/Despre noi" element={<About />} />

@@ -61,19 +61,18 @@
     left: 50%;
 }
 
-.allproducts{
-    margin: 50px;
-    display: flex;
-    gap: 30px;
-    margin-left: 200px;
+.allproducts-item{
+   margin-top: 50px;
+   display: flex;
+   align-content: center;
+   gap: 30px;
 }
-
-#scrollableDiv.allproducts {
+#scrollableDiv{
     width:80%;
     overflow: auto;
     align-content: center;
+    margin-left: 150px;
 }
-
 
 @media(max-width:1280px) {
     .hero-left {

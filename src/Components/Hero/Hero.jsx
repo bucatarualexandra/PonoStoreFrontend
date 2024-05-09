@@ -24,7 +24,7 @@ const Hero = () => {
                 <h1>√ Plicuri dar</h1>
                 <h1>√ Mărturii</h1>
                 <h1>√ Tot ce ai nevoie</h1>
-                <img src={hero_image} className="hero-image" />
+                <img src={hero_image} className="hero-image" alt="" />
 
                 <p></p>
 
@@ -34,11 +34,15 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="allproducts" id="scrollableDiv">
+            <div className="allproducts-item" id="scrollableDiv">
                 {allProducts.map((item, i) => {
-                    return <Item key={i} id={item.id} name={item.name}
-                        image={item.image} new_price={item.new_price}
-                        old_price={item.old_price} />
+                    return <Item 
+                    key={i} 
+                    id={item.id} 
+                    name={item.name}
+                    image_urls={item.image_urls && item.image_urls.length > 0 ? item.image_urls[0]: ""} 
+                    new_price={item.new_price}
+                    old_price={item.old_price} />
                 })}
 
             </div>

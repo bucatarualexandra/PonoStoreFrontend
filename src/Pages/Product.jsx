@@ -1,23 +1,29 @@
-import React, { useContext } from "react"
-import { ShopContext } from "../Context/ShopContext"
+import React, { useContext } from "react";
+import { ShopContext } from "../Context/ShopContext";
 import { useParams } from "react-router-dom";
-import Breadcrum from "../Components/Breadcrums/Breadcrum";
 import ProductDisplay from "../Components/ProductDisplay/ProductDisplay";
 import RelatedProducts from "../Components/RelatedProducts/RelatedProducts";
 
-
 const Product = () => {
-    const { all_product } = useContext(ShopContext);
+    const { allProducts } = useContext(ShopContext);
     const { productId } = useParams();
-    const product = all_product.find((e) => e.id === Number(productId))
+    
+    // Check if allProducts is not undefined before using find
+    const product = allProducts && allProducts.find((product) => product.id === Number(productId));
 
+    // Check if product is not undefined before rendering
     return (
         <div>
-            <Breadcrum product={product} />
-            <ProductDisplay product={product}/>
-            <RelatedProducts/>
+            {product ? (
+                <>
+                    <ProductDisplay product={product} />
+                    <RelatedProducts />
+                </>
+            ) : (
+                <div>Loading...</div> // or any other error handling logic
+            )}
         </div>
+    );
+};
 
-    )
-}
-export default Product
+export default Product;
